@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="background_downloading">正在后台下载新版本…</string>
+    <string name="click_hint">点击进行安装</string>
+    <string name="continue_downloading">点击继续下载</string>
+    <string name="dialog_new">发现新版本v%s可以下载啦！</string>
+    <string name="dialog_new_size">新版本大小：%sM</string>
+    <string name="download_completed">下载完成</string>
+    <string name="download_error">下载出错</string>
+    <string name="latest_version">当前已是最新版本!</string>
+    <string name="start_download">开始下载</string>
+    <string name="start_download_hint">可稍后查看下载进度</string>
+    <string name="start_downloading">正在下载新版本</string>
+    <string name="update">升级</string>
+    <style name="DialogActivity" parent="Theme.AppCompat">
+        <!--对话框背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否有覆盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--背景变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="UpdateDialog" parent="DialogActivity">
+        <!--背景变暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <declare-styleable name="NumberProgressBar">
+        <attr format="color" name="progress_unreached_color"/>
+        <attr format="color" name="progress_reached_color"/>
+
+        <attr format="dimension" name="progress_text_size"/>
+        <attr format="color" name="progress_text_color"/>
+    </declare-styleable>
+</resources>

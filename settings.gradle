@@ -1,0 +1,3 @@
+include ':djq'
+include ':app'
+rootProject.name = "Libs"
