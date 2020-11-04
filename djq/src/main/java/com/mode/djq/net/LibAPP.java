@@ -15,6 +15,91 @@ public class LibAPP extends Application {
     }
 }
 
+
+/********  权限
+ *    private final String[] PERMISSIONS = new String[]{
+ *             Manifest.permission.READ_EXTERNAL_STORAGE,
+ *             Manifest.permission.WRITE_EXTERNAL_STORAGE,
+ *             Manifest.permission.CAMERA,
+ *             Manifest.permission.RECORD_AUDIO,
+ *             Manifest.permission.MODIFY_AUDIO_SETTINGS,
+ *             Manifest.permission.ACCESS_COARSE_LOCATION,
+ *             Manifest.permission.ACCESS_FINE_LOCATION,
+ *             Manifest.permission.ACCESS_WIFI_STATE,
+ *             Manifest.permission.CHANGE_WIFI_STATE,
+ *     };
+ *
+ *       @SuppressLint("WrongConstant")
+ *     private void checkPermission() {
+ *         AndPermission.with(this)
+ *                 .runtime()
+ *                 .permission(PERMISSIONS)
+ *                 .onGranted(new Action<List<String>>() {
+ *                     @Override
+ *                     public void onAction(List<String> data) {
+ *
+ *                         new Handler().postDelayed(new Runnable() {
+ *                             @Override
+ *                             public void run() {
+ *                                 goToActivity();
+ *                             }
+ *                         },1000);
+ *
+ *                     }
+ *                 })
+ *                 .onDenied(new Action<List<String>>() {
+ *                     @Override
+ *                     public void onAction(List<String> data) {
+ *
+ *                          // 当用户没有允许该权限时，回调该方法
+ *                          Toast.makeText(SplashActivity.this,"没有获取文件存储权限，该功能无法使用",Toast.LENGTH_SHORT).show();
+ *
+ *                          判断用户是否点击了禁止后不再询问，AndPermission.hasAlwaysDeniedPermission(MainActivity.this, data)
+ *
+ *                      goToActivity();
+ *                      if(AndPermission.hasAlwaysDeniedPermission(SplashActivity.this,data)){
+ *                             //true，弹窗再次向用户索取权限
+ *                      showSettingDialog(SplashActivity.this,data);
+ *                  }
+ *                  }
+ *                   }).start();
+ *
+ *              }
+ *
+ *          private void showSettingDialog(SplashActivity splashActivity,List<String> data){
+ *             }
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+
+
+/**
+ *      65535
+ *     implementation 'com.android.support:multidex:1.0.3'
+
+ *     Application
+ *
+ *     onCreate(){
+ *       MultiDex.install(this);
+ *     }
+ */
+
 /**
  * 一般在Aplication，或者基类中配置，只需要调用一次即可
  * 可以配置log开关
