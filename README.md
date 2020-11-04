@@ -11,11 +11,11 @@
 
 
 
-  DownloadManager manager = DownloadManager.getInstance(MainActivity.this);
-                                manager.setApkName("appupdate.apk")
-                                        .setApkUrl(apkurl)
-                                        .setSmallIcon(R.mipmap.logo)
-                                        .download();
+                 DownloadManager manager = DownloadManager.getInstance(MainActivity.this);
+                                                manager.setApkName("appupdate.apk")
+                                                        .setApkUrl(apkurl)
+                                                        .setSmallIcon(R.mipmap.logo)
+                                                        .download();
 2. 继承了okgo  简单用法get 
 
 
@@ -25,17 +25,17 @@
 
 
 
-  new OKGO().Get("url", MainActivity.this, new OkGoNetCallBack() {
-            @Override
-            public void onSuccess(String data) {
-                LogUtil.e("onsuccess",data);
-            }
+                new OKGO().Get("url", MainActivity.this, new OkGoNetCallBack() {
+                          @Override
+                          public void onSuccess(String data) {
+                              LogUtil.e("onsuccess",data);
+                          }
 
-            @Override
-            public void onError(Throwable e) {
+                          @Override
+                          public void onError(Throwable e) {
 
-            }
-        });
+                          }
+                      });
                 psot 
                 
                 HttpParams httpParams = new HttpParams();
