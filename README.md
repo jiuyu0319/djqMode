@@ -1,5 +1,17 @@
 # djqMode
 
+                  allprojects {
+                      repositories {
+                        ...
+                        maven { url 'https://jitpack.io' }
+                      }
+                    }
+
+                  dependencies {
+                            implementation 'com.github.jiuyu0319:djqMode:1.0.+'
+                    }
+
+
 1.内置升级功能，一句话就可以升级app 兼容安卓10. 通知栏进度条
 
 
