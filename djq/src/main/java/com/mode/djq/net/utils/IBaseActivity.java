@@ -49,7 +49,7 @@ public abstract class IBaseActivity extends AppCompatActivity implements View.On
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         if (transparent){
-            StatusBarUtil.setColor(this,getResources().getColor(R.color.transparent));
+            StatusBarUtil.setTransparentForWindow(this);
         }
         initView(mContextView);
         setListener();
