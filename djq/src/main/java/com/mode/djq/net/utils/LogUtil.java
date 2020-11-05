@@ -1,6 +1,10 @@
 package com.mode.djq.net.utils;
 
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
 import android.util.Log;
+
+import com.mode.djq.net.LibAPP;
 
 /**
  * 项目名:    AppUpdate
@@ -15,8 +19,22 @@ public final class LogUtil {
     /**
      * 日志开关
      */
-    private static boolean b = true;
+    private static boolean b =true;
+    public static void init(){
+        b = isApkInDebug(LibAPP.getC());
 
+    }
+    /**
+     * 判断当前应用是否是debug状态
+     */
+    public static boolean isApkInDebug(Context context) {
+        try {
+            ApplicationInfo info = context.getApplicationInfo();
+            return (info.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
+        } catch (Exception e) {
+            return false;
+        }
+    }
     public static void enable(boolean enable) {
         b = enable;
     }

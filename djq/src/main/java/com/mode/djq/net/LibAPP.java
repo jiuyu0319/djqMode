@@ -1,17 +1,27 @@
 package com.mode.djq.net;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.lzy.okgo.OkGo;
+import com.mode.djq.net.utils.LogUtil;
 import com.mode.djq.net.utils.SPUtil;
 
 public class LibAPP extends Application {
+    static Context context;
+    public static Context getC() {
+        return context;
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
         SPUtil.initContext(this);
         OkGo.getInstance().init(this);
+        LogUtil.init();
+        if (context == null){
+            context = this;
+        }
     }
 }
 
